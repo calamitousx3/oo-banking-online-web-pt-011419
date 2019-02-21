@@ -19,7 +19,10 @@ class Transfer
       
       elsif @status == "complete"
       
-      
+      else
+      @sender.deposit( @amount * -1 ) 
+      @receiver.deposit( @amount )
+      @status = "complete"
     end
    end 
   
